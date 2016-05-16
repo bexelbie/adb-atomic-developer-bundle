@@ -1,8 +1,6 @@
-[[how-to-update-the-atomic-developer-bundle-to-the-latest-version]]
-How to update the Atomic Developer Bundle to the latest version
----------------------------------------------------------------
+= How to update the Atomic Developer Bundle to the latest version
 
-* If you are using the image from atlas.hashicorp.com
+== If you are using the image from atlas.hashicorp.com
 1.  Check if a newer version of the box is available use this command:
 +
 ----------------------
@@ -30,7 +28,8 @@ version with this command:
 ------------
 # vagrant up
 ------------
-* If you are using image from cloud.centos.org
+
+== If you are using image from cloud.centos.org
 +
 You will need to monitor the mailing list and other announcement points
 to determine if a new image is available. If an image is available,
