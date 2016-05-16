@@ -1,0 +1,199 @@
+[[what-is-the-atomic-developer-bundle-adb]]
+What is the Atomic Developer Bundle (ADB)?
+------------------------------------------
+
+The Atomic Developer Bundle (ADB) is a prepackaged development
+environment filled with production-grade pre-configured tools that makes
+container developer's lives easier. The ADB supports the development of
+multi-container applications against different technologies and
+orchestrators while providing a path that promotes best practices.
+
+As a container developer, you want to use the ADB for these reasons:
+
+* Pre-Configured: You don't have to spend time building an environment
+and fighting configuration battles
+* Multiple Environment Support: The ADB works on Windows, Linux and Mac
+OS X. The ADB supports several orchestrators (Open Shift, Kubernetes,
+Mesos, and plain Docker). The ADB is language independent and supports
+multiple developer models (IDE, CLI, SSH containment).
+* Production-Grade: The components of the ADB are configured to behave
+just as they will in production. Containers promise seamless delivery,
+but only if you test them in the right environment. This is that
+environment.
+* Self-Contained: The ADB is ready to go once installed. It comes
+prepackaged with the most common components ready, in case they are
+needed.
+* Open Source: The ADB leverages existing tools and technologies where
+ever possible to avoid pushing a developer into an environment that
+won't be supportable in production or that is tied to a single vendor.
+This also means it benefits from the stability of existing projects
+instead of reinventing the wheel.
+
+The ADB is a virtual machine that is executed with Vagrant and some
+Vagrant plugins.
+
+[[when-would-the-atomic-developer-bundle-adb-typically-be-used]]
+When would the Atomic Developer Bundle (ADB) typically be used?
+---------------------------------------------------------------
+
+A developer begins using the ADB, in most cases, once they have a
+working application that has been decomposed into micro-services. They
+then follow this general outline of steps:
+
+1.  Build a Dockerfile for each microservice that is not able to be used
+from another source. In other words, build containers for the parts of
+the application that are unique and reuse for those that aren't (i.e. a
+database service)
+2.  Confirm the application works in the ADB by manually launching the
+application's container components or by using the instance of OpenShift
+in the container to launch the application
+3.  Build a Nulecule description of the application or complete the
+OpenShift application configuration
+4.  Test the application
+
+The original link:docs/motivation.md[motivation] behind this project may
+also be of interest.
+
+[[what-is-the-typical-usage-pattern]]
+What is the Typical Usage Pattern?
+----------------------------------
+
+The ADB supports three basic modes of usage. The modes vary by how much
+they rely on tools on the developers workstation. From most to least
+reliant, they are:
+
+* Host-based IDE Mode
++
+This mode uses the ADB as a server resource for host-based IDE tools. In
+this mode, the user will run eclipse or other IDE tools that will access
+the resources of the ADB.
+* Host-based CLI Mode
++
+This mode uses the ADB as a server resource for host-based CLI tools. In
+this mode, the user will run docker and other CLI tools on their
+workstation and the result will be containers executed inside of the
+ADB.
+* SSH Mode
++
+This mode uses the ADB as a Linux virtual machine. The user will use the
+ssh command to log into the ADB and will directly execute docker and
+other commands from the command line. This is similar to having
+installed a Linux virtual machine and then installing and configuring
+all of the software the ADB ships with.
+
+More information about link:docs/using.rst[using the ADB] is available.
+
+[[what-does-it-contain]]
+What does it contain?
+---------------------
+
+The ADB is built on top of https://www.centos.org/[CentOS 7] and
+contains the following:
+
+* https://www.docker.com/[Docker]: container runtime and packaging
+* https://github.com/projectatomic/atomic/[Atomic CLI]: container usage
+assistance
+* http://kubernetes.io/[Kubernetes]: container orchestration
+* http://www.openshift.org/[OpenShift Origin]: a next generation PaaS
+for docker containers.
+*
+https://github.com/projectatomic/openshift2nulecule/[openshift2nulecule]:
+a tool that creates a Nulecule application from an existing OpenShift
+project
+
+The ADB supports https://github.com/projectatomic/atomicapp/[Atomic
+App], an implementation of the multi-container application
+specification, https://github.com/projectatomic/nulecule/[nulecule] for
+multi-container applications.
+
+[[how-do-i-install-and-run-the-atomic-developer-bundle-adb]]
+How do I Install and Run the Atomic Developer Bundle (ADB)?
+-----------------------------------------------------------
+
+Below is a quick installation guide using the most common options.
+Detailed link:docs/installing.rst[installation instructions] are
+available.
+
+1.  https://www.virtualbox.org/wiki/Downloads[Install VirtualBox] for
+your operating system. Linux users may wish to use their distribution
+provided package.
++
+`sudo dnf install VirtualBox`
+2.  https://docs.vagrantup.com/v2/installation/index.html[Install
+Vagrant] for your operating system. Linux users may wish to use their
+distribution provided package.
++
+`sudo dnf install vagrant`
+3.  Install the
+https://github.com/projectatomic/vagrant-service-manager[vagrant-service-manager]
+Vagrant plugin:
++
+`vagrant plugin install vagrant-service-manager`
+4.  Download the latest ADB from
+https://atlas.hashicorp.com/boxes/search[atlas.hashicorp.com]. This can
+be done automatically by Vagrant:
++
+`$ vagrant init projectatomic/adb`
+5.  Start the ADB
++
+`$ sudo vagrant up`
+6.  If you will be using host based tools, setup your environment with
+vagrant-service-manager
++
+`$sudo vagrant service-manager --help`
+
+[[what-is-full-feature-set]]
+What is full feature set?
+-------------------------
+
+Today the box supports the following:
+
+* Providing docker support to unsupported platforms (i.e. Microsoft
+Windows, Mac OS X, etc.)
+* Kubernetes orchestration for local testing of applications
+* Application definition using the Nulecule specification
+* Additional goals, objectives and work in progress can be found in the
+link:docs/architecture.rst[architecture and roadmap] document and on the
+Project Atomic https://trello.com/b/j1rEolFe/container-tools[trello
+board]
+
+[[what-are-the-deliverables-and-how-do-i-get-it]]
+What are the deliverables and how do I get it?
+----------------------------------------------
+
+The ADB is delivered as a Vagrant box for various (currently libvirt and
+VirtualBox) providers. The boxes are built using the CentOS powered
+https://wiki.centos.org/HowTos/CommunityBuildSystem[Community Build
+System]. Boxes are delivered via
+https://atlas.hashicorp.com/boxes/search[Hashicorp's Atlas] and are
+available at
+http://cloud.centos.org/centos/7/vagrant/x86_64/images/[cloud.centos.org].
+These boxes differ from existing Vagrant boxes for CentOS as they have
+specific build requirements that are not enabled in those boxes.
+
+[[documentation]]
+Documentation
+-------------
+
+* link:docs/architecture.rst[Architecture and Roadmap]
+* link:docs/building.rst[Building the Vagrant box] for Developers
+* link:docs/installing.rst[Installing the ADB]
+* link:docs/using.rst[How to use the ADB]
+* link:docs/updating.rst[Updating the ADB]
+
+[[interested-in-contributing-to-this-project]]
+Interested in Contributing to this project?
+-------------------------------------------
+
+We welcome new ideas, suggestions, issues and pull requests. Want to be
+more involved, join us:
+
+* Mailing List:
+https://www.redhat.com/mailman/listinfo/container-tools[container-tools@redhat.com]
+* IRC: #atomic and #nulecule on https://freenode.net/[freenode]
+* Weekly Standup/Review/Plannng Meeting: Every Monday at 1300 UTC in
+#nulecule (https://freenode.net/[freenode]) for 0.5 hour.
+
+Documentation is written using
+http://docutils.sourceforge.net/docs/user/rst/quickref.html[reStructuredText].
+An http://rst.ninjs.org[online reStructuredText editor] is available.
