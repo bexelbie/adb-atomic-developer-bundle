@@ -12,9 +12,10 @@ Two virtualization providers have been tested with the ADB.
 +
 The suggested virtualization provider is
 https://www.virtualbox.org[VirtualBox]. Installation instructions are
-available online_. While the latest stable shipping release should work,
-the majority of testing has been done with version 5.0.0 on Mac OS X and
-5.0.8 on Microsoft Windows.
+available https://www.virtualbox.org/manual/ch02.html[online]. While the
+latest stable shipping release should work, the majority of testing has
+been done with version 5.0.0 on Mac OS X and 5.0.8 on Microsoft Windows.
+
 * Fedora
 +
 Two different virtualization providers are supported on Linux,
@@ -23,6 +24,7 @@ The choice as to which to use should be driven by your preferences and
 environmental concerns and is outside of the scope of this document.
 Both will work equally well in their default configuration. You may wish
 to read the section on file synchronization when making this decision.
++
 ** VirtualBox installation instructions are available
 https://www.virtualbox.org/manual/ch02.html#startingvboxonlinux[online
 at the VirtualBox website]. Testing has been done with versions 4.3.34
@@ -40,9 +42,13 @@ $ sudo /etc/init.d/vboxdrv setup
 +
 While the latest stable release should work, the majority of testing has
 been done with version 4.3.30.
+
+** Installing libvirt dependencies can be skipped as they are
+automatically installed together with `vagrant-libvirt` package.
 +
 Testing has been done with libvirt version 1.2.18 and vagrant-libvirt
 versions through to 0.0.32.
+
 * CentOS
 +
 Two different virtualization providers are supported on Linux,
@@ -51,6 +57,7 @@ The choice as to which to use should be driven by your preferences and
 environmental concerns and is outside of the scope of this document.
 Both will work equally well in their default configuration. You may wish
 to read the section on file synchronization when making this decision.
++
 ** VirtualBox installation instructions are available
 https://www.virtualbox.org/manual/ch02.html#startingvboxonlinux[online
 at the VirtualBox website].
@@ -70,8 +77,12 @@ $ sudo mv virtualbox.repo /etc/yum.repos.d/
 $ sudo yum -y install VirtualBox-4.3
 $ sudo /etc/init.d/vboxdrv setup
 ----------------------------------------------------------------------------
+
 ** Installing libvirt dependencies can be skipped as they are
 automatically installed together with `vagrant-libvirt` package.
++
+Testing has been done with libvirt version 1.2.18 and vagrant-libvirt
+versions through to 0.0.32.
 
 [[install-vagrant]]
 2. Install Vagrant
@@ -91,14 +102,17 @@ Vagrant
 Follow the directions at
 https://docs.vagrantup.com/v2/installation/index.html[vagrantup.com]
 Testing has been done with version 1.7.4.
+
 * Fedora 22/23/Rawhide(24)
 +
 Testing has been done with version 1.7.2.
+
 ** To install Vagrant with VirtualBox in Fedora 22/23/24 (Rawhide):
 +
 -----------------------------
 $ sudo dnf install -y vagrant
 -----------------------------
+
 ** To install Vagrant with libvirt in Fedora 22/23/24 (Rawhide):
 +
 ----------------------------------------------------
@@ -110,6 +124,7 @@ $ sudo systemctl start libvirtd
 # Set libvirtd to start automatically on system boot
 $ sudo systemctl enable libvirtd
 ----------------------------------------------------
+
 * CentOS
 +
 Vagrant packages are not available directly in CentOS core. However they
