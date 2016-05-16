@@ -1,5 +1,4 @@
-============================================== This Document Refers to
-Goals from Version 1.0 ==============================================
+= This Document Refers to Goals from Version 1.0
 
 While it is useful to see where have come from, these motivations may no
 longer reflect the overall project.
