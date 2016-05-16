@@ -38,7 +38,6 @@ _Deliverables:_ Vagrant boxes for libvirt and VirtualBox
 These boxes contains the following components from the latest CentOS
 Core:
 
-_______________________________________________________________________________________________________________________________________________________
 * CentOS7 minimal install
 ** @development
 ** deltarpm
@@ -60,6 +59,7 @@ ________________________________________________________________________________
 The docker daemon is configured to expose a TLS protected TCP port so
 that Vagrant host based tools can access it. This is accomplished in
 three steps:
++
 1.  The systemd startup for docker inside of the ADB will generate TLS
 certificates if they don't already exist.
 2.  The user of the ADB exposes the docker daemon port in their
@@ -73,11 +73,9 @@ plugin]
 ** Possibly via containerized extensions for VirtualBox
 ** Designed to make sure code can move from the Vagrant host to the ADB
 easily
-_______________________________________________________________________________________________________________________________________________________
 
 Containers providing the following functionality:
 
-_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 * OpenShift - A PAAS environment for source-to-image container execution
 in a devops pattern
 * https://github.com/projectatomic/atomicapp[Atomic App] - The
@@ -92,15 +90,12 @@ Files] - possibly using this container:
 https://github.com/devassistant/da-docker-nulecule - see
 https://github.com/projectatomic/adb-atomic-developer-bundle/issues/39[Issue
 #39]
-_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 Additional Containers pre-loaded for quicker access:
 
-__________________________________________________________________________________________________________________
 * Latest Centos Base Image - see
 https://github.com/projectatomic/adb-atomic-developer-bundle/issues/25[Issue
 #25]
-__________________________________________________________________________________________________________________
 
 [[post-version-2.0-ideas]]
 Post Version 2.0 Ideas
