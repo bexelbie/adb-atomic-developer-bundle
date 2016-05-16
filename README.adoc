@@ -1,6 +1,11 @@
+= The Atomic Developer Bundle
+:toc:
+:toc-placement!:
+
+toc::[]
+
 [[what-is-the-atomic-developer-bundle-adb]]
-What is the Atomic Developer Bundle (ADB)?
-------------------------------------------
+== What is the Atomic Developer Bundle (ADB)?
 
 The Atomic Developer Bundle (ADB) is a prepackaged development
 environment filled with production-grade pre-configured tools that makes
@@ -33,8 +38,7 @@ The ADB is a virtual machine that is executed with Vagrant and some
 Vagrant plugins.
 
 [[when-would-the-atomic-developer-bundle-adb-typically-be-used]]
-When would the Atomic Developer Bundle (ADB) typically be used?
----------------------------------------------------------------
+== When would the Atomic Developer Bundle (ADB) typically be used?
 
 A developer begins using the ADB, in most cases, once they have a
 working application that has been decomposed into micro-services. They
@@ -55,8 +59,7 @@ The original link:docs/motivation.md[motivation] behind this project may
 also be of interest.
 
 [[what-is-the-typical-usage-pattern]]
-What is the Typical Usage Pattern?
-----------------------------------
+== What is the Typical Usage Pattern?
 
 The ADB supports three basic modes of usage. The modes vary by how much
 they rely on tools on the developers workstation. From most to least
@@ -81,11 +84,10 @@ other commands from the command line. This is similar to having
 installed a Linux virtual machine and then installing and configuring
 all of the software the ADB ships with.
 
-More information about link:docs/using.rst[using the ADB] is available.
+More information about link:docs/using.adoc[using the ADB] is available.
 
 [[what-does-it-contain]]
-What does it contain?
----------------------
+== What does it contain?
 
 The ADB is built on top of https://www.centos.org/[CentOS 7] and
 contains the following:
@@ -107,11 +109,10 @@ specification, https://github.com/projectatomic/nulecule/[nulecule] for
 multi-container applications.
 
 [[how-do-i-install-and-run-the-atomic-developer-bundle-adb]]
-How do I Install and Run the Atomic Developer Bundle (ADB)?
------------------------------------------------------------
+== How do I Install and Run the Atomic Developer Bundle (ADB)?
 
 Below is a quick installation guide using the most common options.
-Detailed link:docs/installing.rst[installation instructions] are
+Detailed link:docs/installing.adoc[installation instructions] are
 available.
 
 1.  https://www.virtualbox.org/wiki/Downloads[Install VirtualBox] for
@@ -143,8 +144,7 @@ vagrant-service-manager
 `$sudo vagrant service-manager --help`
 
 [[what-is-full-feature-set]]
-What is full feature set?
--------------------------
+== What is full feature set?
 
 Today the box supports the following:
 
@@ -153,13 +153,12 @@ Windows, Mac OS X, etc.)
 * Kubernetes orchestration for local testing of applications
 * Application definition using the Nulecule specification
 * Additional goals, objectives and work in progress can be found in the
-link:docs/architecture.rst[architecture and roadmap] document and on the
+link:docs/architecture.adoc[architecture and roadmap] document and on the
 Project Atomic https://trello.com/b/j1rEolFe/container-tools[trello
 board]
 
 [[what-are-the-deliverables-and-how-do-i-get-it]]
-What are the deliverables and how do I get it?
-----------------------------------------------
+== What are the deliverables and how do I get it?
 
 The ADB is delivered as a Vagrant box for various (currently libvirt and
 VirtualBox) providers. The boxes are built using the CentOS powered
@@ -172,18 +171,16 @@ These boxes differ from existing Vagrant boxes for CentOS as they have
 specific build requirements that are not enabled in those boxes.
 
 [[documentation]]
-Documentation
--------------
+== Documentation
 
-* link:docs/architecture.rst[Architecture and Roadmap]
-* link:docs/building.rst[Building the Vagrant box] for Developers
-* link:docs/installing.rst[Installing the ADB]
-* link:docs/using.rst[How to use the ADB]
-* link:docs/updating.rst[Updating the ADB]
+* link:docs/architecture.adoc[Architecture and Roadmap]
+* link:docs/building.adoc[Building the Vagrant box] for Developers
+* link:docs/installing.adoc[Installing the ADB]
+* link:docs/using.adoc[How to use the ADB]
+* link:docs/updating.adoc[Updating the ADB]
 
 [[interested-in-contributing-to-this-project]]
-Interested in Contributing to this project?
--------------------------------------------
+== Interested in Contributing to this project?
 
 We welcome new ideas, suggestions, issues and pull requests. Want to be
 more involved, join us:
@@ -194,6 +191,4 @@ https://www.redhat.com/mailman/listinfo/container-tools[container-tools@redhat.c
 * Weekly Standup/Review/Plannng Meeting: Every Monday at 1300 UTC in
 #nulecule (https://freenode.net/[freenode]) for 0.5 hour.
 
-Documentation is written using
-http://docutils.sourceforge.net/docs/user/rst/quickref.html[reStructuredText].
-An http://rst.ninjs.org[online reStructuredText editor] is available.
+Documentation is written using http://asciidoc.org/[AsciiDoc].
