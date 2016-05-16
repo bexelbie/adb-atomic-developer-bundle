@@ -1,25 +1,20 @@
-[[architecture-and-roadmap-for-the-adb]]
-Architecture and Roadmap for the ADB
-------------------------------------
+= Architecture and Roadmap for the ADB
 
 The Atomic Developer Bundle is a constantly evolving platform. As such,
 this document should be considered carefully relative to both what is
 shipping, what issues and pull requests are open, and the date of last
-revision. This document begins with the architecture for what will
-become version 2.0 of the ADB. The roadmap that follows is quite
-speculative.
+revision. This document begins with the architecture for what will become
+version 2.0 of the ADB. The roadmap that follows is quite speculative.
 
 The ADB is a stable CentOS Core installation with docker container and
-orchestration capability. Many of the tools and features are provided by
-containers drawn from other sources.
+orchestration capability. Many of the tools and features are provided
+by containers drawn from other sources.
 
 The ADB is not built on CentOS Atomic Host because there is a need for a
 fully writeable system to support the use case where the developer uses
 `ssh` to access the box and does all work on the inside.
 
-[[version-2.0-goals]]
-Version 2.0 Goals
-~~~~~~~~~~~~~~~~~
+== Version 2.0 Goals
 
 * Enabling host-based development tools such as Eclipse to access the
 build environments inside the ADB
@@ -97,9 +92,7 @@ Additional Containers pre-loaded for quicker access:
 https://github.com/projectatomic/adb-atomic-developer-bundle/issues/25[Issue
 #25]
 
-[[post-version-2.0-ideas]]
-Post Version 2.0 Ideas
-~~~~~~~~~~~~~~~~~~~~~~
+== Post Version 2.0 Ideas
 
 Beyond here be dragons and ideas which are not committed too.
 

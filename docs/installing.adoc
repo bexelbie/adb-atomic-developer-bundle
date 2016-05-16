@@ -1,10 +1,7 @@
-[[installing-the-atomic-developer-bundle]]
-Installing the Atomic Developer Bundle
---------------------------------------
+= Installing the Atomic Developer Bundle
 
 [[install-a-virtualization-provider]]
-1. Install a Virtualization Provider
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+== Install a Virtualization Provider
 
 Two virtualization providers have been tested with the ADB.
 
@@ -85,14 +82,13 @@ Testing has been done with libvirt version 1.2.18 and vagrant-libvirt
 versions through to 0.0.32.
 
 [[install-vagrant]]
-2. Install Vagrant
-~~~~~~~~~~~~~~~~~~
+== Install Vagrant
 
 * Microsoft Windows
-1.  Follow the directions at
+1. Follow the directions at
 https://docs.vagrantup.com/v2/installation/index.html[vagrantup.com]
 Testing has been done with version 1.7.4.
-2.  Install an `ssh` client. Two good options are:
+2. Install an `ssh` client. Two good options are:
 ** https://cygwin.com/install.html[Cygwin]
 ** http://www.mingw.org/[mingw]
 ** Putty is not recommended as it doesn't currently interface with
@@ -146,8 +142,7 @@ $ sudo systemctl enable libvirtd
 ----------------------------------------------------
 
 [[download-the-adb]]
-3. Download the ADB
-~~~~~~~~~~~~~~~~~~~
+== Download the ADB
 
 There are two ways to download the ADB. You can have `vagrant` do it for
 you the first time you install it or you can download it manually.
