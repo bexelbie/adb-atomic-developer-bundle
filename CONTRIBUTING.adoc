@@ -1,6 +1,11 @@
+= Contributing to the Atomic Developer Bundle
+:toc:
+:toc-placement!:
+
+toc::[]
+
 [[contributing-to-adb]]
-Contributing to ADB
--------------------
+== Contributing to ADB
 
 The following is a set of guidelines for contributing to ADB, which is
 hosted in the https://github.com/projectatomic[Project Atomic
@@ -14,8 +19,7 @@ https://www.redhat.com/mailman/listinfo/container-tools[container-tools@redhat.c
 ML they will be added to this document.
 
 [[pull-requests]]
-Pull Requests
-~~~~~~~~~~~~~
+=== Pull Requests
 
 * All changes should be made by pull request (PR), even from core
 committers/maintainers.
