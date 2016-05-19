@@ -1,4 +1,4 @@
-= Architecture and Roadmap for the ADB
+== Architecture and Roadmap for the ADB
 
 The Atomic Developer Bundle is a constantly evolving platform. As such,
 this document should be considered carefully relative to both what is
@@ -14,7 +14,7 @@ The ADB is not built on CentOS Atomic Host because there is a need for a
 fully writeable system to support the use case where the developer uses
 `ssh` to access the box and does all work on the inside.
 
-== Version 2.0 Goals
+=== Version 2.0 Goals
 
 * Enabling host-based development tools such as Eclipse to access the
 build environments inside the ADB
@@ -92,7 +92,7 @@ Additional Containers pre-loaded for quicker access:
 https://github.com/projectatomic/adb-atomic-developer-bundle/issues/25[Issue
 #25]
 
-== Post Version 2.0 Ideas
+=== Post Version 2.0 Ideas
 
 Beyond here be dragons and ideas which are not committed too.
 

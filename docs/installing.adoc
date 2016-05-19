@@ -1,7 +1,7 @@
-= Installing the Atomic Developer Bundle
+== Installing the Atomic Developer Bundle
 
 [[install-a-virtualization-provider]]
-== Install a Virtualization Provider
+=== Install a Virtualization Provider
 
 Two virtualization providers have been tested with the ADB.
 
@@ -82,7 +82,7 @@ Testing has been done with libvirt version 1.2.18 and vagrant-libvirt
 versions through to 0.0.32.
 
 [[install-vagrant]]
-== Install Vagrant
+=== Install Vagrant
 
 * Microsoft Windows
 1. Follow the directions at
@@ -142,7 +142,7 @@ $ sudo systemctl enable libvirtd
 ----------------------------------------------------
 
 [[download-the-adb]]
-== Download the ADB
+=== Download the ADB
 
 There are two ways to download the ADB. You can have `vagrant` do it for
 you the first time you install it or you can download it manually.

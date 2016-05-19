@@ -37,3 +37,6 @@ build/
 .#*
 
 **/.vagrant
+
+# Doc artifacts
+docs/index.html

@@ -1,4 +1,4 @@
-= Building the ADB Vagrant Box
+== Building the ADB Vagrant Box
 
 The Vagrant box is based on CentOS7. It is built using the latest
 packages from CentOS core. Some components of the ADB will be delivered

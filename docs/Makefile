@@ -7,7 +7,8 @@ SHELL := /bin/bash
 html:
 	# asciidoctor can only put a single HTML output
 	# chunked output is close per upstream
-	asciidoctor -d book -a linkcss -a stylesheet=http://www.projectatomic.io/stylesheets/application.css index.adoc
+	#asciidoctor -d book -a linkcss -a stylesheet=http://www.projectatomic.io/stylesheets/application.css index.adoc
+	asciidoctor -d book index.adoc
 
 plain-html:
 	asciidoctor index.adoc

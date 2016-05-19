@@ -1,11 +1,11 @@
-= Using the Atomic Developer Bundle
+== Using the Atomic Developer Bundle
 :toc:
 :toc-placement!:
 
 toc::[]
 
 [[principles]]
-== Principles
+=== Principles
 
 Consider the ADB to be ephemeral and do not store data in it long term.
 It is recommended that you do the following:
@@ -22,7 +22,7 @@ Operating System manuals and the http://vagrantup.com/[Vagrant] website
 for more details.
 
 [[starting-the-vagrant-box]]
-== Starting the Vagrant Box
+=== Starting the Vagrant Box
 
 1.  Initialize a new Vagrant environment by creating a Vagrantfile. You
 may find it helpful to first create a new directory for use by this
@@ -47,7 +47,7 @@ virtualization provider to use. For example, to use VirtualBox, the
 command would be `vagrant up --provider virtualbox`
 
 [[using-custom-vagrantfiles-for-specific-use-cases]]
-== Using Custom Vagrantfiles for Specific Use Cases
+=== Using Custom Vagrantfiles for Specific Use Cases
 
 Custom Vagrant files are shipped for specific use cases. The README
 files contain useful documentation and a quickstart guide.
@@ -69,7 +69,7 @@ CLI, or via `vagrant ssh`
 ** link:../components/centos/centos-mesos-marathon-singlenode-setup/README.rst[README]
 
 [[using-the-adb-with-host-based-tools-eclipse-and-clis]]
-== Using the ADB with Host-based Tools (Eclipse and CLIs)
+=== Using the ADB with Host-based Tools (Eclipse and CLIs)
 
 Many users have preferred development environments built from tools
 running on their development workstation. Those workstations may not be
@@ -192,7 +192,7 @@ point, you are ready to use the ADB with Eclipse.
 **Note:** Testing has been done with Eclipse 4.5.0.
 
 [[using-the-box-via-ssh]]
-== Using the box via SSH
+=== Using the box via SSH
 
 Today most users will do their work inside the Vagrant box. Access the
 box by using `ssh` to login to it with the following command:
@@ -205,7 +205,7 @@ You are now at a shell prompt inside the Vagrant box. You can now
 execute commands and use the tools provided.
 
 [[using-docker]]
-=== Using `docker`
+==== Using `docker`
 
 The ADB provides a full container environment and runs both `docker` and
 `kubernetes`. All standard commands work, for example:
@@ -216,7 +216,7 @@ docker run -t -i centos /bin/bash
 ---------------------------------
 
 [[using-atomic-app-and-nulecule]]
-=== Using Atomic App and Nulecule
+==== Using Atomic App and Nulecule
 
 Details on these projects can be found at these urls:
 
@@ -243,7 +243,7 @@ NAME        LABELS                             STATUS
 -----------------------------------------------------
 
 [[vagrant-bi-directional-folder-sync]]
-== Vagrant bi-directional folder sync
+=== Vagrant bi-directional folder sync
 
 For basic usage please refer to the
 https://www.vagrantup.com/docs/synced-folders/basic_usage.html[Vagrant
@@ -278,7 +278,7 @@ https://github.com/dotless-de/vagrant-vbguest[vagrant-vbguest] plugin to
 install Virtualbox guest additions in ADB Vagrant box.
 
 [[destroying-the-vagrant-box]]
-== Destroying the Vagrant Box
+=== Destroying the Vagrant Box
 
 Warning, this will destroy any data you have stored in the Vagrant box.
 You will not be able to restart this instance and will have to create a

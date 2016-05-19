@@ -1,4 +1,4 @@
-= Using the Cockpit with the Atomic Developer Bundle
+== Using the Cockpit with the Atomic Developer Bundle
 
 http://cockpit-project.org[Cockpit] makes it easy to administer your GNU/Linux servers via a web
 browser. It can manage system resources and has special functionality
@@ -11,7 +11,7 @@ can:
 * Pull and delete images
 
 [[accessing-cockpit-in-the-adb]]
-== Accessing Cockpit in the ADB
+=== Accessing Cockpit in the ADB
 
 These instructions are written assuming you are at a command prompt on
 the host you are running the ADB on.
