@@ -192,6 +192,7 @@ Documentation
 * `Architecture and Roadmap`_
 * `Building the Vagrant box`_ for Developers
 
+
 .. _Installing the ADB: docs/installing.rst
 .. _How to use the ADB: docs/using.rst
 .. _Using Cockpit with the ADB: docs/cockpit.rst
